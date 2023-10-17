@@ -1,10 +1,10 @@
-import React from 'react';
+import { Layout, Topic } from './Section.styled';
 
 export const Section = ({ title, children }) => {
   return (
-    <>
-      <h2>{title}</h2>
-      {children}
-    </>
+    <Layout>
+      <Topic>{title}</Topic>
+      <>{children}</>
+    </Layout>
   );
 };

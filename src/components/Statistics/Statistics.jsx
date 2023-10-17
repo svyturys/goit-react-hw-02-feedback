@@ -1,13 +1,23 @@
-import React from 'react';
+import { RatingList } from './Statistics.styled';
 
-export const Statistics = ({ good, neutral, bad, total, positivePercent }) => {
+export const Statistics = ({ rating, total, positivePercentage }) => {
   return (
-    <>
-      <p>Good {good}</p>
-      <p>Neutral {neutral}</p>
-      <p>Bad {bad}</p>
-      <p>Total {total}</p>
-      <p>Positive feedbeack {positivePercent} %</p>
-    </>
+    <RatingList>
+      <li>
+        <p>Good: {rating.good}</p>
+      </li>
+      <li>
+        <p>Neutral: {rating.neutral}</p>
+      </li>
+      <li>
+        <p>Bad: {rating.bad}</p>
+      </li>
+      <li>
+        <p>Total: {total}</p>
+      </li>
+      <li>
+        <p>Positive feedback: {positivePercentage}%</p>
+      </li>
+    </RatingList>
   );
 };
